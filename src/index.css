@@ -3,10 +3,10 @@
 :root {
   font-family: 'Marcellus', system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-synthesis: none;
+  /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 
   --primary-color: #080f1b;
   --secondary-color: #244981;
