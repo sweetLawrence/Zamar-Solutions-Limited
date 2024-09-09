@@ -6,9 +6,7 @@
   padding: 0;
 }
 
-.row {
-  display: flex;
-}
+
 .button {
   outline: none;
   background: none;
