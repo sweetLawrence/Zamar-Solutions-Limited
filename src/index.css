@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+
+:root {
+  font-family: 'Marcellus', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #080f1b;
+  --secondary-color: #244981;
+  --background-color: #f5f5f5;
+  --accent-color-left: #00abe7;
+  --accent-color-right: #18d95f;
+  --bg-color: #f8f8f8;
+}
+
+
+
+
+  /* color-scheme: light dark;   */
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+

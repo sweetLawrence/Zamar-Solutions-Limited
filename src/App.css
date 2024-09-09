@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: red;
+}
+
+.row {
+  display: flex;
+}
+.button {
+  outline: none;
+  background: none;
+  border: none;
+  border: 0.1px solid transparent;
+  background: linear-gradient(
+    to right,
+    var(--accent-color-left),
+    var(--accent-color-right)
+  );
+  color: white;
+  padding: 0.7em 2em;
+  border-radius: 50px;
+}
+
+img {
+  width: 100%;
+}
+
+.left_shape {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  height: 100vh;
+  width: auto;
+  overflow: hidden;
+}
+
+.left_svg {
+  height: 100%;
+  width: auto;
+  /* position: relative; */
+  
+}
