@@ -22,6 +22,7 @@
 }
 .navigation_section .item {
   margin: 0 0.9em;
+  cursor: pointer;
   /* text-decoration: underline; */
 }
 .navigation_section .btn_section{
