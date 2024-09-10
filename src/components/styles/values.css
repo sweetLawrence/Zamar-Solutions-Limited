@@ -15,3 +15,58 @@
     height: 100%;
     object-fit: contain;
 }
+
+.values .right_section{
+    /* border: 2px solid green; */
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.5em;
+    color: white;
+}
+.values .cards_section{
+    margin-top: .9em;
+    display: flex;
+    align-items: c;
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
+}
+.values .cards_section .grouped{
+    width: 40%;
+    margin-right: .5em;
+}
+.values .cards_section .single{
+    width: 40%;
+}
+.value_cards{
+    border: 1px solid red;
+    width: 100%;
+    margin: .4em;
+    border-radius: 5px;
+    padding: .6em .4em;
+}
+.value_cards .title_section{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: .8em;
+}
+.value_cards .title_section .index{
+    border: solid transparent;
+    background: linear-gradient(to right, var(--accent-color-right), var(--accent-color-left));
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5em;
+
+}
+.value_cards .list_content{
+    /* background: red; */
+    width: 50%;
+    padding-left: 1.3em;
+    padding-bottom:3em;
+    
+}
