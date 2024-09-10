@@ -1,72 +1,74 @@
 .values {
-    background: #122541;
-    height: 60vh;
-    display: flex;
-    margin-bottom: 20%;
+  background: #122541;
+  height: 60vh;
+  display: flex;
+  margin-bottom: 20%;
 }
 
 .values .woman_image {
-    /* background: yellow; */
-    width: 35%;
-    overflow: hidden;
+  /* background: yellow; */
+  width: 35%;
+  overflow: hidden;
 }
 
 .values img {
-    height: 100%;
-    object-fit: contain;
+  height: 100%;
+  object-fit: contain;
 }
 
-.values .right_section{
-    /* border: 2px solid green; */
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 2.5em;
-    color: white;
+.values .right_section {
+  /* border: 2px solid green; */
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5em;
+  color: white;
 }
-.values .cards_section{
-    margin-top: .9em;
-    display: flex;
-    align-items: c;
-    /* justify-content: space-around; */
-    /* flex-wrap: wrap; */
+.values .cards_section {
+  margin-top: 0.9em;
+  display: flex;
+  align-items: c;
 }
-.values .cards_section .grouped{
-    width: 40%;
-    margin-right: .5em;
+.values .cards_section .grouped {
+  width: 40%;
+  margin-right: 0.5em;
 }
-.values .cards_section .single{
-    width: 40%;
+.values .cards_section .single {
+  width: 40%;
 }
-.value_cards{
-    border: 1px solid red;
-    width: 100%;
-    margin: .4em;
-    border-radius: 5px;
-    padding: .6em .4em;
+.value_cards {
+  border-top: 1.5px solid var(--accent-color-right);
+  border-left: 1.5px solid var(--accent-color-right);
+  border-right: 1.5px solid var(--accent-color-left);
+  border-bottom: 1.5px solid var(--accent-color-left);
+  width: 100%;
+  margin: 0.4em;
+  padding: 0.6em 0.4em;
+  border-radius: 10px;
 }
-.value_cards .title_section{
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    margin-bottom: .8em;
+.value_cards .title_section {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 0.8em;
 }
-.value_cards .title_section .index{
-    border: solid transparent;
-    background: linear-gradient(to right, var(--accent-color-right), var(--accent-color-left));
-    width: 50px;
-    height: 50px;
-    border-radius:50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: .5em;
-
+.value_cards .title_section .index {
+  border: solid transparent;
+  background: linear-gradient(
+    to right,
+    var(--accent-color-right),
+    var(--accent-color-left)
+  );
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5em;
 }
-.value_cards .list_content{
-    /* background: red; */
-    width: 50%;
-    padding-left: 1.3em;
-    padding-bottom:3em;
-    
+.value_cards .list_content {
+  width: 50%;
+  padding-left: 1.3em;
+  padding-bottom: 3em;
 }
