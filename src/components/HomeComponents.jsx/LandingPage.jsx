@@ -2,6 +2,7 @@ import React from 'react'
 import BillBoard from '../../assets/images/billboard.png'
 import HomeLeftShape from '../../components/HomeLeftShape'
 import Button from '../../components/Button'
+import '../styles/landingpage.css'
 
 const LandingPage = () => {
   return (
