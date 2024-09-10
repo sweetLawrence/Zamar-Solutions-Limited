@@ -1,16 +1,17 @@
-.values{
+.values {
     background: #122541;
     height: 60vh;
     display: flex;
     margin-bottom: 20%;
 }
-.values .woman_image{
+
+.values .woman_image {
     /* background: yellow; */
     width: 35%;
     overflow: hidden;
-
 }
-.values img{
-   width: 250px;
-    object-fit: cover;
+
+.values img {
+    height: 100%;
+    object-fit: contain;
 }
