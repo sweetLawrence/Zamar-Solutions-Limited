@@ -3,10 +3,10 @@
 .landing_page {
     /* border: 2px solid red;  */
     height: 100vh;
-    position: absolute;
+    /* position: absolute; */
     /* top: -15px; */
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     z-index: -1;
     overflow: hidden;
   }
