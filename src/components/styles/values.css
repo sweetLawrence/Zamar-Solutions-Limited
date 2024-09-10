@@ -6,11 +6,11 @@
 }
 .values .woman_image{
     /* background: yellow; */
-    width: 35%;
+    width: 39%;
     overflow: hidden;
 
 }
 .values img{
-   width: 250px;
+   width: 300px;
     object-fit: cover;
 }
