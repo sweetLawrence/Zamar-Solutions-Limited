@@ -33,7 +33,9 @@ const Testimonials = () => {
           <SwiperSlide>
             <TestimonialCard />
           </SwiperSlide>
-
+          <SwiperSlide>
+            <TestimonialCard />
+          </SwiperSlide>
           <SwiperSlide>
             <TestimonialCard />
           </SwiperSlide>
@@ -49,7 +51,6 @@ const Testimonials = () => {
           <SwiperSlide>
             <TestimonialCard />
           </SwiperSlide>
-
         </Swiper>
       </div>
 

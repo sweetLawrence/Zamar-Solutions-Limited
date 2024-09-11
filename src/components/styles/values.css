@@ -23,18 +23,19 @@
   flex-direction: column;
   padding-top: 2.5em;
   color: white;
+  margin-left: 3.5em;
 }
 .values .cards_section {
   margin-top: 0.9em;
   display: flex;
-  align-items: c;
+  /* align-items: rig; */
 }
 .values .cards_section .grouped {
-  width: 40%;
+  width: 44%;
   margin-right: 0.5em;
 }
 .values .cards_section .single {
-  width: 40%;
+  width: 45%;
 }
 .value_cards {
   border-top: 1.5px solid var(--accent-color-right);

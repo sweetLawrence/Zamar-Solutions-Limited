@@ -11,9 +11,9 @@ const TestimonialCard = () => {
         <div className="title">CEO, Pawtech Labs</div>
       </div>
       <div className="content">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+       " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
         consequatur ullam possimus, facilis culpa nulla perspiciatis illum
-        
+        "
        
       </div>
       {/* <div className="btn_section">
