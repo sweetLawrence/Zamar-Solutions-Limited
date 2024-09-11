@@ -1,0 +1,125 @@
+
+.testimonials {
+  height: 100vh;
+  /* background: #f0f0f0; */
+}
+
+.testimonials .title_section {
+  text-align: center;
+  color: var(--blue-titles);
+  padding-top: 2em;
+}
+
+.testimonials .cards_section {
+  margin-top: 0.5em;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 2em 2em 2em;
+  background: red;
+  background: #f0f0f0;
+  /* overflow-x: auto; */
+}
+
+.testimonials .slider {
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.navigation_buttons {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.navigation_buttons button {
+  margin: 0 1em;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: var(--accent-color-right);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* TESTIMONIAL CARD */
+
+.testimonial_card {
+  background: white;
+  width: 340px; /*380*/
+  height: 300px; /*320*/
+  min-width: 250px; /*380*/
+  border-radius: 10px;
+  padding: 0.5em;
+  position: relative;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.5em;
+}
+
+.testimonial_card .dp {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: red;
+  margin: 1em 0;
+}
+
+.testimonial_card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.testimonial_card .header {
+  margin-bottom: 0.5em;
+}
+
+.testimonial_card .name {
+  font-weight: 700;
+  color: var(--accent-color-left);
+  color: var(--blue-titles);
+}
+
+.testimonial_card .title {
+  font-style: italic;
+}
+
+.testimonial_card .content {
+  width: 95%;
+  margin: .1em auto;
+  color: #797979;
+  /* background: red; */
+}
+
+/*  SWIPER JS - PAGINATION STYLES */
+.swiper-pagination {
+  bottom: 0px !important;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: lightgray;
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: 0.7;
+  transition: background 0.3s, opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007aff;
+  background: linear-gradient(
+    to right,
+    var(--accent-color-left),
+    var(--accent-color-right)
+  ) !important;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet:hover {
+  background: #0056b3;
+  opacity: 1;
+}

@@ -29,7 +29,7 @@ const HomeLeftShape = () => {
     <div className="left_shape">
       <svg
         className="left_svg"
-        viewBox="0 0 470 987" // No need to set width/height directly in the SVG
+        viewBox="0 0 470 987" 
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
