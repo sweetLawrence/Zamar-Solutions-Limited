@@ -50,9 +50,6 @@ const Testimonials = () => {
             <TestimonialCard />
           </SwiperSlide>
 
-          <SwiperSlide>
-            <TestimonialCard />
-          </SwiperSlide>
         </Swiper>
       </div>
 
