@@ -93,6 +93,12 @@
   /* background: red; */
 }
 
+.testimonials .btnSection{
+    /* background-color: red; */
+    text-align: center;
+    margin-top: .7em;
+}
+
 /*  SWIPER JS - PAGINATION STYLES */
 .swiper-pagination {
   bottom: 0px !important;
