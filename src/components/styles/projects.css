@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap");
+
+.projects {
+  height: 100vh;
+}
+.projects .title_section {
+  color: var(--blue-titles);
+  font-size: 2.1em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+.projects_card {
+  /* display: flex; */
+  height: 450px;
+  /* background: rgba(178, 173, 173, 0.2); */
+  margin-bottom: 0.3em;
+  padding: 0.7em 0 0.7em 0;
+  transition: all 0.5s ease;
+}
+
+.projects_card .title {
+  font-size: 1.4em;
+  width: 70%;
+  font-weight: 600;
+  margin: 0.5em;
+}
+
+.projects_card .img-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: rgba(178, 173, 173, 0.2);
+  transition: all 0.5s ease;
+  /* background: #e9e7e7; */
+}
+.projects_card .img-container .left {
+  width: 40%;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+.projects_card .img-container .right {
+  width: 60%;
+  background: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.l {
+  background: maroon;
+  width: 40%;
+  height: 80%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.r {
+  background: white;
+  width: 40%;
+  height: 80%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+}
+.card {
+  background: yellow;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.card1{
+    height: 30%;
+    background: yellowgreen;
+    transition: all 0.5s ease;
+}
+.card2{
+    height: 70%;
+    background:aqua;
+    transition: all 0.5s ease;
+}
+.card3{
+    height: 60%;
+    background:gold;
+    transition: all 0.5s ease;
+}
+.card4{
+    height: 40%;
+    background:grey;
+    transition: all 0.5s ease; 
+}
+
+
+.projects_card:hover .l,
+.projects_card:hover .r {
+  flex-direction: row; /* Change direction to row when parent is hovered */
+  justify-content: space-between;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 50%;
+}
+
+.projects_card:hover .card {
+  height: 100%; /* Make all cards the same height */
+  width: 100%; /* Make all cards the same width */
+  flex: 1; /* Ensure all cards take equal space */
+}
+.projects_card:hover .right{
+    width: 90%;
+}
