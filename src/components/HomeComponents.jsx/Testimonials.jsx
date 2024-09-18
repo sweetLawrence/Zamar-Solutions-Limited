@@ -5,8 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import useFetchTestimonials from "../../hooks/useFetchTestimonials";
 
 const Testimonials = () => {
+  let { testimonials, images } = useFetchTestimonials();
+
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
@@ -16,7 +19,7 @@ const Testimonials = () => {
   return (
     <div className="testimonials">
       <div className="title_section">
-        <h1>Don’t believe us, believe them</h1>
+        <h1>Don’t believe us? Believe them</h1>
       </div>
       <div className="cards_section">
         <Swiper
@@ -29,14 +32,26 @@ const Testimonials = () => {
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           className="cards_section"
-        >
+        >{testimonials.map((testimonial, index) => (
           <SwiperSlide>
+            {/* {testimonials.map((testimonial, index) => ( */}
+              <TestimonialCard
+                name={testimonial.name}
+                title={testimonial.title}
+                content={testimonial.testimonial}
+                img={images[index]}
+              />
+            {/* ))} */}
+          </SwiperSlide>
+           ))}
+          {/* <SwiperSlide>
             <TestimonialCard />
           </SwiperSlide>
           <SwiperSlide>
             <TestimonialCard />
-          </SwiperSlide>
-          <SwiperSlide>
+          </SwiperSlide> */}
+
+          {/* <SwiperSlide>
             <TestimonialCard />
           </SwiperSlide>
 
@@ -46,11 +61,7 @@ const Testimonials = () => {
 
           <SwiperSlide>
             <TestimonialCard />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <TestimonialCard />
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </div>
 
