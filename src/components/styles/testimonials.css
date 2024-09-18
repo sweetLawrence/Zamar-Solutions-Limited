@@ -1,4 +1,3 @@
-
 .testimonials {
   height: 100vh;
   /* background: #f0f0f0; */
@@ -15,8 +14,10 @@
   display: flex;
   align-items: center;
   padding: 0.5em 2em 2em 2em;
-  background: red;
+  /* background: red; */
   background: #f0f0f0;
+  /* background: #ecf6fe;  */
+  /* background: var(--secondary-color); */
   /* overflow-x: auto; */
 }
 
