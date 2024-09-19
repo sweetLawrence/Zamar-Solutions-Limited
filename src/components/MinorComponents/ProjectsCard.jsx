@@ -1,7 +1,7 @@
 import React from "react";
 import { imageUrlConstructor } from "../../utils/imageUrl";
 
-const ProjectsCard = ({ title, images, collectionId, id }) => {
+const ProjectsCard = ({ title, images, collectionId, id ,caption}) => {
   return (
     <div className="projects_card">
       <div className="company_title">{title}</div>
@@ -12,6 +12,7 @@ const ProjectsCard = ({ title, images, collectionId, id }) => {
               src={imageUrlConstructor(collectionId, id, img)}
               alt={`${title} image ${index + 1}`}
             />
+            
           </div>
         ))}
       </div>

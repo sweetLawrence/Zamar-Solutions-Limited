@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ProjectsCard from "../MinorComponents/ProjectsCard";
 import { project_titles } from "../../Data/navdata";
-import axios from 'axios';
-import '../styles/projects.css'
+import axios from "axios";
+import "../styles/projects.css";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState(project_titles[0]);
@@ -11,11 +11,13 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get('https://zamar.pockethost.io/api/collections/Projects/records'); // Replace with your Pockethost URL
-        console.log('Fetched Projects Data:', response.data); 
-        setProjectsData(response.data.items || []); 
+        const response = await axios.get(
+          "https://zamar.pockethost.io/api/collections/Projects/records"
+        ); // Replace with your Pockethost URL
+        console.log("Fetched Projects Data:", response.data);
+        setProjectsData(response.data.items || []);
       } catch (error) {
-        console.error('Error fetching projects data:', error);
+        console.error("Error fetching projects data:", error);
       }
     };
 
@@ -32,9 +34,9 @@ const Projects = () => {
 
       <div className="navigation">
         {project_titles.map((item, index) => (
-          <div 
-            key={index} 
-            className={`row ${selectedCategory === item ? 'active' : ''}`} 
+          <div
+            key={index}
+            className={`row ${selectedCategory === item ? "active" : ""}`}
             onClick={() => setSelectedCategory(item)}
           >
             {item}
@@ -45,12 +47,13 @@ const Projects = () => {
       <div className="projects_section">
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project, index) => (
-            <ProjectsCard 
-              key={index} 
-              title={project.title} 
-              images={project.images} 
+            <ProjectsCard
+              key={index}
+              title={project.title}
+              images={project.images}
               collectionId={project.collectionId}
               id={project.id}
+              caption={project.caption}
             />
           ))
         ) : (
