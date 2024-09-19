@@ -10,11 +10,11 @@ const Footer = () => {
           <p>Empowering Businesses with Digital Solutions.</p>
           <p>&copy; {new Date().getFullYear()} Zamar Solutions Ltd. All rights reserved.</p>
           <br />
-          <br />
+          {/* <br /> */}
           <p>Call: 0720968693</p>
           <p>Call: 0745686343</p>
           <br />
-          <br />
+          {/* <br /> */}
           <p>Email: info@zamarsolution.co.ke</p>
         </div>
 
