@@ -15,7 +15,7 @@ const Footer = () => {
           <p>Call: 0745686343</p>
           <br />
           {/* <br /> */}
-          <p>Email: info@zamarsolution.co.ke</p>
+          <p>Email: info@zamarsolutions.co.ke</p>
         </div>
 
         <div className="footer-right">
