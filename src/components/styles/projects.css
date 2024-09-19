@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap");
 
 .projects {
-  /* height: 10vh; */
+  min-height: 100vh;
   /* background: red; */
 }
-.projects .projects_section{
-    
+.projects .projects_section {
 }
 .projects .title_section {
   color: var(--blue-titles);
@@ -30,7 +29,7 @@
   padding: 0.1em 0 0.1em 0;
   transition: all 0.5s ease;
   /* background: red; */
-  margin-top: .5em;
+  margin-top: 0.5em;
   /* border: 2px solid orange; */
 }
 
@@ -67,7 +66,7 @@
   justify-content: space-between;
   /* height: 100%; */
   /* width: 70%; */
-  margin: .5em auto;
+  margin: 0.5em auto;
   padding: 0.6em;
 }
 .projects_card .img_container {
@@ -84,7 +83,7 @@
   /* width: 100%; */
   height: 100%;
   /* filter: saturate(20%); */
-  transition: all .5s;
+  transition: all 0.5s;
 }
 .projects_card img:hover {
   filter: saturate(100%);
@@ -93,14 +92,33 @@
 .projects_card .company_title {
   color: black !important;
   font-size: 1.2em;
-  margin: 0.5em 0 4px .7em;
+  margin: 0.5em 0 4px 0.7em;
   font-weight: 600;
 }
 
 .img_container:hover img {
-    filter: none;
-  }
-  
-  .img_cards:hover .img_container:not(:hover) img {
-    filter: saturate(50%);
-  }
+  filter: none;
+}
+
+.img_cards:hover .img_container:not(:hover) img {
+  filter: saturate(30%);
+}
+
+.projects .more_projects {
+  color: var(--accent-color-right);
+  margin: 0.4em 0 0 0.5em;
+  cursor: pointer;
+  transition: all 0.5s;
+  width: 15%;
+}
+.r-arr {
+  margin-left: 0;
+  transition: all 0.5s;
+}
+.projects .more_projects:hover .r-arr {
+  color: var(--accent-color-left);
+  margin-left: 0.5em;
+}
+.projects .more_projects:hover{
+    color: var(--accent-color-left);
+}
