@@ -21,6 +21,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to bottom, rgb(0, 0, 0, .5), transparent);
+    background: linear-gradient(to bottom, rgb(0, 0, 0,.7), transparent);
     z-index: 10;
 }
