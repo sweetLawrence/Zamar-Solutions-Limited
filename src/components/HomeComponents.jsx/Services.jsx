@@ -23,10 +23,6 @@ const Services = () => {
           <p>No services available.</p>
         )}
 
-        {/* <ServicesCard />
-        <ServicesCard />
-        <ServicesCard />
-        <ServicesCard /> */}
       </div>
     </div>
   );

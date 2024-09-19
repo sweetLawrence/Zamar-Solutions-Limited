@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap");
 
 .projects {
-  height: 100vh;
+  /* height: 10vh; */
+  /* background: red; */
+}
+.projects .projects_section{
+    
 }
 .projects .title_section {
   color: var(--blue-titles);
@@ -10,18 +14,24 @@
   text-align: center;
   margin-bottom: 0.4em;
 }
-.projects .navigation .row.active{
-    background: linear-gradient(to right, var(--accent-color-left),var(--accent-color-right)); /* Gradient colors */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.projects .navigation .row.active {
+  background: linear-gradient(
+    to right,
+    var(--accent-color-left),
+    var(--accent-color-right)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .projects_card {
   /* display: flex; */
-  height: 450px;
-  /* background: rgba(178, 173, 173, 0.2); */
-  margin-bottom: 0.3em;
-  padding: 0.7em 0 0.7em 0;
+  /* height: 400px; */
+
+  padding: 0.1em 0 0.1em 0;
   transition: all 0.5s ease;
+  /* background: red; */
+  margin-top: .5em;
+  /* border: 2px solid orange; */
 }
 
 .projects_card .title {
@@ -31,57 +41,57 @@
   margin: 0.5em;
 }
 
-.projects .navigation{
-    display: flex;
-    /* background: red; */
-    align-items: center;
-    width: 50%;
-    justify-content: space-around;
-    font-weight: 600;
+.projects .navigation {
+  display: flex;
+  /* background: red; */
+  align-items: center;
+  width: 50%;
+  justify-content: space-around;
+  font-weight: 600;
 }
-.projects .row{
-    cursor: pointer;
+.projects .row {
+  cursor: pointer;
 }
-.projects_card .images_section{
-    margin: 2% 0 0 0;
-    height: 100vh;
-    width: 100%;
-    background: var(--secondary-color);
-    padding: .2em;
+/* .projects_card .images_section {
+  margin: 2% 0 0 0;
+  height: 100vh;
+  width: 100%;
+  background: var(--secondary-color);
+  padding: 0.2em;
+} */
+.projects_card .img_cards {
+  /* background: red; */
+  /* background: var(--secondary-color); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 100%; */
+  /* width: 70%; */
+  margin: .5em auto;
+  padding: 0.6em;
 }
-.projects_card .img_cards{
-    /* background: red; */
-    background: var(--secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    margin: 1% 0 1% 0;
-    padding: .2em;
+.projects_card .img_container {
+  width: 290px;
+  height: 300px;
+  border-radius: 10px;
+  background: white;
+  /* margin: 0.3em; */
+  overflow: hidden;
 }
-.projects_card .img_container{
-width: 200px;
-height: 300px;
-border-radius: 10px;
-background: white;
-margin: .3em;
+.projects_card img {
+  object-fit: cover;
+  /* width: 100%; */
+  height: 100%;
+  filter: saturate(20%);
+  transition: all .5s;
 }
-.projects_card img{
-    object-fit: contain;
-    /* width: 100%; */
-    height: 100%;
-    filter: saturate(10%);
-}
-.projects_card img:hover{
-    object-fit: contain;
-    /* width: 100%; */
-    height: 100%;
-    filter: saturate(100%);
+.projects_card img:hover {
+  filter: saturate(100%);
 }
 
-.projects_card .company_title{
-    color: black!important;
-    font-size: 1.2em;
-    margin: 6px 0 4px 0;
-    font-weight: 600;
+.projects_card .company_title {
+  color: black !important;
+  font-size: 1.2em;
+  margin: 0.5em 0 4px .7em;
+  font-weight: 600;
 }

@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
 import axiosInstance from "../utils/axios";
+import { imageUrlConstructor } from "../utils/imageUrl";
 
 const useFetchServices = () => {
   const [services, setServices] = useState([]);
   const [images, setImages] = useState([]);
-
-  const imageUrlConstructor = (collectionId, id, image) => {
-    return `https://zamar.pockethost.io/api/files/${collectionId}/${id}/${image}`;
-  };
 
   const fetchServices = async () => {
     try {

@@ -49,6 +49,8 @@ const Projects = () => {
               key={index} 
               title={project.title} 
               images={project.images} 
+              collectionId={project.collectionId}
+              id={project.id}
             />
           ))
         ) : (
