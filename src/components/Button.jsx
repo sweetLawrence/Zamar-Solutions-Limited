@@ -2,7 +2,7 @@ import React from 'react'
 
 const Button = ({content}) => {
   return (
-    <button className='button'>{content}</button>
+    <button className='button' >{content}</button>
   )
 }
 

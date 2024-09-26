@@ -1,25 +1,71 @@
-.find_us{
-    margin-top: 2em;
-    height: 80vh;
-    margin-bottom: .5em;
+.find_us {
+  margin-top: 2em;
+  height: 120vh;
+  /* margin-bottom: 0.5em; */
+  position: relative;
+  background: #122541;
 }
-.find_us .img_holder{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.find_us .img_holder {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
 }
-.find_us img{
-    object-fit: cover;
-    filter: brightness(.9);
+.find_us img {
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+.find_us .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgb(0, 0, 0, 0.7), transparent);
+  z-index: 2;
+}
 
+.find_us .texts_holder {
+  z-index: 4;
+  position: absolute;
+  top: 18%;
+  left: 4%;
+  color: white;
+  text-align: start;
 }
-.find_us .overlay{
-    width: 100%;
-    height: 100%;
+.find_us .texts_holder h1 {
+  font-size: 3em;
+  margin-bottom: 0.1em;
+}
+.find_us .map {
+  position: absolute;
+  width: 92%;
+  height: 310px;
+  /* background: red; */
+  top:40%;
+  left: 4%;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 7;
+}
+
+.find_us .cp{
+    color: white;
     position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to bottom, rgb(0, 0, 0,.7), transparent);
-    z-index: 2;
+    bottom: 10px;
+    /* bottom: 25px; */
+    width: 100%;
+    text-align: center;
+}
+
+.find_us .pawtech{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: .6em;
+    color: #04E762;
+    margin: .5em 0 0 0;
+    padding: .4em;
+    background: #080F1B;
 }
