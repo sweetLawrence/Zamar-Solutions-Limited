@@ -12,7 +12,7 @@ const useFetchServices = () => {
         "/api/collections/Services/records"
       );
       const data = response.data.items;
-      setServices(data);
+       setServices(data);
 
       const imageUrls = data.map((service) =>
         imageUrlConstructor(service.collectionId, service.id, service.image)

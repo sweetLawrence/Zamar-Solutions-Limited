@@ -9,7 +9,7 @@ import Home from './pages/Home';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />, // Layout will include Navbar and Outlet for content
+    element: <Layout />, 
     children: [
       {
         path: '/',

@@ -27,7 +27,7 @@ const useFetchTestimonials = () => {
     fetchTestimonials();
   }, []);
 
-  console.log(testimonials)
+  // console.log(testimonials)
 
   return { testimonials, images };
 };

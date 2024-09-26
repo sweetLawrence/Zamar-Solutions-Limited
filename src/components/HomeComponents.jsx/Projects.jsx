@@ -15,7 +15,7 @@ const Projects = () => {
         const response = await axios.get(
           "https://zamar.pockethost.io/api/collections/Projects/records"
         ); // Replace with your Pockethost URL
-        console.log("Fetched Projects Data:", response.data);
+        // console.log("Fetched Projects Data:", response.data);
         setProjectsData(response.data.items || []);
       } catch (error) {
         console.error("Error fetching projects data:", error);

@@ -1,0 +1,35 @@
+.clients {
+  height: auto;
+}
+.client_logo_section {
+  /* background: red; */
+  min-height: 60vh;
+}
+.clients h2 {
+  text-align: center;
+  font-size: 2em;
+  color: var(--blue-titles);
+}
+.client-logos {
+  padding: 0.2em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.client-logos .card {
+  width: 140px;
+  height: 100px;
+  background: white;
+  margin: 0.5em 1.3em 0.5em 1em;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.client-logos img {
+  scale: 0.7;
+}
