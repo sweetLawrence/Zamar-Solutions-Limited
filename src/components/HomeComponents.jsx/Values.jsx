@@ -7,7 +7,7 @@ const Values = () => {
   return (
     <div className="values">
       <div className="woman_image">
-        <img src={Woman} alt="A woman's image" className={"outlined"} />
+        {/* <img src={Woman} alt="A woman's image" className={"outlined"} /> */}
       </div>
       <div className="right_section">
         <div className="title_section">
