@@ -24,6 +24,7 @@
   color: white;
   padding: 1.0em 2.4em;
   border-radius: 50px;
+  min-width:150px ;
 }
 
 img {
