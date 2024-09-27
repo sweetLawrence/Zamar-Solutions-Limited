@@ -119,6 +119,45 @@
   color: var(--accent-color-left);
   margin-left: 0.5em;
 }
-.projects .more_projects:hover{
-    color: var(--accent-color-left);
+.projects .more_projects:hover {
+  color: var(--accent-color-left);
+}
+
+@media screen and (max-width: 500px) {
+  .projects{
+    /* background: red; */
+    margin-top: -25px;
+  }
+  .projects .navigation {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 0.5em;
+  }
+  .projects .navigation .row {
+    margin-bottom: 0.5em;
+  }
+
+  .projects .navigation .row.active {
+    border-bottom: 1px solid var(--primary-color);
+  }
+
+  .projects_card .img_cards {
+    flex-wrap: wrap;
+  }
+
+  .projects_card .img_container {
+    width: 180px;
+    height: 190px;
+    margin-bottom: .9em;
+   
+  }
+  .projects .more_projects {
+    color: var(--accent-color-right);
+    margin: -0.5em 0 1.9em 0.5em;
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 100%;
+
+  }
 }

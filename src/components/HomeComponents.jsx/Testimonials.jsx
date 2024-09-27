@@ -6,9 +6,33 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import useFetchTestimonials from "../../hooks/useFetchTestimonials";
+import { useEffect, useState } from "react";
 
 const Testimonials = () => {
   let { testimonials, images } = useFetchTestimonials();
+
+  const [slidesPerView, setSlidesPerView] = useState(3);
+  const [spaceBetween, setSpaceBetween] = useState(50);
+
+  useEffect(() => {
+    const updateSliderSettings = () => {
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth < 500) {
+        setSlidesPerView(1);
+        setSpaceBetween(150);
+      } else {
+        setSlidesPerView(3);
+        setSpaceBetween(50);
+      }
+    };
+
+    updateSliderSettings();
+
+    window.addEventListener("resize", updateSliderSettings);
+
+    return () => window.removeEventListener("resize", updateSliderSettings);
+  }, []);
 
   const pagination = {
     clickable: true,
@@ -16,6 +40,7 @@ const Testimonials = () => {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
   };
+
   return (
     <div className="testimonials">
       <div className="title_section">
@@ -27,41 +52,25 @@ const Testimonials = () => {
             clickable: true,
           }}
           modules={[Pagination]}
-          spaceBetween={50}
-          slidesPerView={3}
+    
+          spaceBetween={spaceBetween}
+          slidesPerView={slidesPerView}
+
           onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          onSwiper={(swiper) => console.log(" ")}
           className="cards_section"
         >{testimonials.map((testimonial, index) => (
           <SwiperSlide>
-            {/* {testimonials.map((testimonial, index) => ( */}
               <TestimonialCard
                 name={testimonial.name}
                 title={testimonial.title}
                 content={testimonial.testimonial}
                 img={images[index]}
               />
-            {/* ))} */}
+
           </SwiperSlide>
            ))}
-          {/* <SwiperSlide>
-            <TestimonialCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimonialCard />
-          </SwiperSlide> */}
-
-          {/* <SwiperSlide>
-            <TestimonialCard />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <TestimonialCard />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <TestimonialCard />
-          </SwiperSlide> */}
+         
         </Swiper>
       </div>
 

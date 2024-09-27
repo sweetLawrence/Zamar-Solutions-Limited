@@ -3,7 +3,6 @@ import ProjectsCard from "../MinorComponents/ProjectsCard";
 import { project_titles } from "../../Data/navdata";
 import axios from "axios";
 import "../styles/projects.css";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState(project_titles[0]);
@@ -14,7 +13,7 @@ const Projects = () => {
       try {
         const response = await axios.get(
           "https://zamar.pockethost.io/api/collections/Projects/records"
-        ); // Replace with your Pockethost URL
+        ); 
         // console.log("Fetched Projects Data:", response.data);
         setProjectsData(response.data.items || []);
       } catch (error) {
@@ -64,10 +63,7 @@ const Projects = () => {
 
       <div className="more_projects">
         <h4>
-          {/* See More Projects{" "}
-          <span className="r-arr">
-            <ArrowForwardIcon />
-          </span> */}
+    
           See More Projects <span className="r-arr">&rarr;</span>
         </h4>
       </div>

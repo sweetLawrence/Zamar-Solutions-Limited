@@ -42,30 +42,52 @@
   width: 92%;
   height: 310px;
   /* background: red; */
-  top:40%;
+  top: 40%;
   left: 4%;
   border-radius: 12px;
   overflow: hidden;
   z-index: 7;
 }
 
-.find_us .cp{
-    color: white;
-    position: absolute;
-    bottom: 10px;
-    /* bottom: 25px; */
-    width: 100%;
-    text-align: center;
+.find_us .cp {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  /* bottom: 25px; */
+  width: 100%;
+  text-align: center;
 }
 
-.find_us .pawtech{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: .6em;
-    color: #04E762;
-    margin: .5em 0 0 0;
-    padding: .4em;
-    background: #080F1B;
+.find_us .pawtech {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.6em;
+  color: #04e762;
+  margin: 0.5em 0 0 0;
+  padding: 0.4em;
+  background: #080f1b;
+}
+iframe{
+  border: nonee;
+}
+
+@media screen and (max-width: 500px) {
+  .find_us{
+    height: 80vh;
+  }
+  .find_us .img_holder {
+    height: 65%;
+    /* background: red; */
+  }
+  .find_us img {
+    height: 100%;
+  }
+  .find_us .texts_holder {
+    top: 7%;
+  }
+  .find_us .map {
+    top: 35%;
+  }
 }

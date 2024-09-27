@@ -10,7 +10,7 @@ const Values = () => {
         {/* <img src={Woman} alt="A woman's image" className={"outlined"} /> */}
       </div>
       <div className="right_section">
-        <div className="title_section">
+        <div className="title_section header ">
           <h1>Our Value System</h1>
         </div>
         <div className="cards_section">

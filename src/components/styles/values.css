@@ -1,6 +1,6 @@
 .values {
   background: #122541;
-  height: 60vh;
+  min-height: 60vh;
   display: flex;
   /* margin-bottom: 20%; */
 }
@@ -72,4 +72,44 @@
   width: 50%;
   padding-left: 1.3em;
   padding-bottom: 3em;
+}
+
+@media screen and (max-width: 500px) {
+  .values .woman_image {
+    width: 0%;
+  }
+  .values .right_section {
+    width: 100%;
+    /* flex-direction: column; */
+
+    margin-left: 0.3em;
+  }
+
+  .values .header {
+    text-align: center;
+  }
+  .values .cards_section {
+    margin-top: 0.9em;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .values .cards_section .grouped {
+    width: 44%;
+    margin-right: 0.5em;
+
+    display: flex;
+    /* background-color: red; */
+    width: 100%;
+  }
+  .values .cards_section .single {
+    width: 95%;
+    margin: .5em auto;
+    margin-left: 0;
+    /* background: red; */
+  }
+
+  .value_cards .inline_content{
+    padding: .5em 0.5em;
+  }
 }

@@ -13,6 +13,8 @@ const LandingPage = () => {
         <div className="color_overlay">
             {/* gradient color overlay */}
         </div>
+
+
         <div className="texts_section">
             <div className="top_text">
                 <div className="upper"> BRINGING YOUR BRAND</div>
@@ -24,6 +26,8 @@ const LandingPage = () => {
             </div>
             <div className="btn"><Button content={"Talk to us"}/></div>
         </div>
+
+        
         <div className="leftside_shape">
             <HomeLeftShape />
         </div>

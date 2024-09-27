@@ -1,5 +1,6 @@
 .testimonials {
-  height: 100vh;
+  min-height: 100vh;
+  /* background: red; */
   /* background: #f0f0f0; */
 }
 
@@ -8,7 +9,6 @@
   color: var(--blue-titles);
   padding-top: 2em;
   font-size: 1.2em;
-  
 }
 
 .testimonials .cards_section {
@@ -50,7 +50,7 @@
   background: white;
   width: 350px; /*380*/
   min-height: 300px;
-  height: 340px; 
+  height: 340px;
   min-width: 250px; /*380*/
   border-radius: 10px;
   padding: 0.5em;
@@ -61,6 +61,20 @@
   align-items: center;
   margin: 0 0.5em;
 }
+@media screen and (max-width: 500px) {
+  .testimonial_card {
+    width: 375px; /*380*/
+    height: 320px;
+    min-width: none;
+    margin: 0 auto;
+  }
+
+  .testimonials .cards_section {
+    padding: 0.5em 0em 2em 0em;
+  }
+
+
+}
 
 .testimonial_card .dp {
   width: 95px;
@@ -68,7 +82,7 @@
   border-radius: 50%;
   overflow: hidden;
   background: rgb(233, 231, 231);
-  
+
   margin: 1em 0;
 }
 
@@ -99,15 +113,15 @@
 
 .testimonial_card .content {
   width: 95%;
-  margin: .2em auto;
+  margin: 0.2em auto;
   color: #797979;
   /* background: red; */
 }
 
-.testimonials .btnSection{
-    /* background-color: red; */
-    text-align: center;
-    margin-top: .7em;
+.testimonials .btnSection {
+  /* background-color: red; */
+  text-align: center;
+  margin-top: 3.9em;
 }
 
 /*  SWIPER JS - PAGINATION STYLES */
@@ -119,7 +133,7 @@
 .swiper-pagination-bullet {
   width: 12px !important;
   height: 12px !important;
-  background: #2C599C !important;
+  background: #2c599c !important;
   border-radius: 50%;
   margin: 0 5px;
   opacity: 0.7;
@@ -127,7 +141,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background: #2C599C!important;
+  background: #2c599c !important;
   /* background: linear-gradient(
     to right,
     var(--accent-color-left),

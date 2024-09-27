@@ -1,5 +1,5 @@
 .services {
-  height: 100vh;
+  min-height: 100vh;
 
   /* clip-path: circle(33% at 0 0);
   background: red; */
@@ -13,14 +13,14 @@
   font-size: 1.2em;
 }
 .services .cards_section {
-    /* background: red; */
-    width: 90%;
-    margin: 0 auto;
-    padding: 1.5em 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+  /* background: red; */
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5em 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .service_card {
@@ -57,7 +57,7 @@
   /* background: red; */
 }
 .service_card .heading h2 {
- font-size: 1.8em;
+  font-size: 1.8em;
 }
 .service_card .content_section {
   /* background: red; */
@@ -70,13 +70,51 @@
   z-index: 1;
   padding-left: 20px;
 }
-.service_card .content_section .content{
-    text-wrap: wrap;
-    word-break: keep-all;
+.service_card .content_section .content {
+  text-wrap: wrap;
+  word-break: keep-all;
 }
 .service_card .btn_section {
   position: absolute;
   bottom: 10px;
   left: 20px;
   z-index: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .services {
+    /* background: red; */
+  }
+
+  .services .cards_section {
+    /* background: red; */
+    width: 100%;
+    margin: 0 auto;
+
+    flex-direction: column;
+  }
+
+  .service_card {
+    width: 96%;
+    min-width: 350px;
+    height: 250px;
+    margin: 0.7em 0.5em;
+    /* background-color: red; */
+  }
+
+  .service_card .content_section {
+  
+    bottom: 70px;
+    height: 120px;
+    width: 95%;
+  }
+  .service_card .heading {
+    color: white;
+    padding: 0.8em 0 0 1.3em;
+    /* background: red; */
+
+    font-size: .8em;
+
+  }
+
 }

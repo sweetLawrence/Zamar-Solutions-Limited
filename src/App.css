@@ -6,6 +6,10 @@
   box-sizing: border-box!important;
 }
 
+.App{
+  overflow-x: hidden;
+ }
+
 
 .button {
   outline: none;
