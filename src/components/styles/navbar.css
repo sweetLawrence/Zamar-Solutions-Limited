@@ -16,6 +16,16 @@
   left: 0;
   z-index: 10;
 }
+.navbar .item.active {
+  background: linear-gradient(
+    to right,
+    var(--accent-color-left),
+    var(--accent-color-right)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
 
 .navbar .navigation_section {
   color: white;
@@ -38,6 +48,14 @@
 
 
 @media screen and (max-width: 500px) {
+  .navbar{
+    padding-left: 0;
+  }
+  .navbar .logo_section{
+    /* background-color: red; */
+    margin-left: -25px;
+    text-align: left;
+  }
   .navbar .navigation_section {
     display: none;
   }

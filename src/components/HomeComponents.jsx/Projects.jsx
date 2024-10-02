@@ -3,6 +3,10 @@ import ProjectsCard from "../MinorComponents/ProjectsCard";
 import { project_titles } from "../../Data/navdata";
 import axios from "axios";
 import "../styles/projects.css";
+import FolderOpenOutlinedIcon from '@mui/icons-material/FolderOpenOutlined';
+import HourglassEmptyOutlinedIcon from '@mui/icons-material/HourglassEmptyOutlined';
+
+
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState(project_titles[0]);
@@ -57,7 +61,10 @@ const Projects = () => {
             />
           ))
         ) : (
-          <p>No projects available for this category.</p>
+          <p className="no-projects">
+            <p className="dec">No project available for this category</p>
+            <FolderOpenOutlinedIcon style={{fontSize:"10em",color:"#f57c00"
+          }}/></p>
         )}
       </div>
 

@@ -3,12 +3,14 @@ import BillBoard from '../../assets/images/billboard.png'
 import HomeLeftShape from '../../components/HomeLeftShape'
 import Button from '../../components/Button'
 import '../styles/landingpage.css'
+import Slideshow from './Slideshow'
 
 const LandingPage = () => {
   return (
     <div className='landing_page'>
          <div className="billboard_image">
-            <img src={BillBoard} alt="An image of a billboard" />
+            <Slideshow />
+            {/* <img src={BillBoard} alt="An image of a billboard" /> */}
         </div>
         <div className="color_overlay">
             {/* gradient color overlay */}
@@ -20,16 +22,21 @@ const LandingPage = () => {
                 <div className="upper"> BRINGING YOUR BRAND</div>
                 <div className="lower">To life: <span className="yellow">outdoor</span></div>
             </div>
-            <div className="bottom_text">
+            <div className="bottom_text pc">
                 <div className="upper">-Indoor & outdoor branding -Digital Marketing</div>
                 <div className="lower">- Digital screen advertising</div>
+            </div>
+            <div className="bottom_text mobile">
+                <div className="upper">-Indoor & outdoor branding </div>
+                <div className="lower">-Digital Marketing</div>
+                <div className="lower">-Digital screen advertising</div>
             </div>
             <div className="btn"><Button content={"Talk to us"}/></div>
         </div>
 
         
         <div className="leftside_shape">
-            <HomeLeftShape />
+            {/* <HomeLeftShape /> */}
         </div>
     </div>
   )

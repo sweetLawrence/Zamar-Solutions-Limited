@@ -3,7 +3,8 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 // import Home from './components/Home';
 // import About from './components/About';
-// import NotFound from './components/NotFound';
+import NotFound from './components/NotFound';
+import Four04 from './components/Four04';
 
 
 const router = createBrowserRouter([
@@ -13,8 +14,27 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />, // Home page
+        element: <Home />,
       },
+      {
+        path: '/about',
+        element: <NotFound />, 
+      },
+      {
+        path: '/projects',
+        element: <NotFound />, 
+      },
+      {
+        path: '/careers',
+        element: <NotFound />, 
+      },{
+        path: '/talk-to-us',
+        element: <NotFound />, 
+      },
+      {
+        path:"*",
+        element:<Four04 />
+      }
      
     ],
   },
