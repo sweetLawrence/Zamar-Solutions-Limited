@@ -1,18 +1,18 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+import FindUs from "./HomeComponents.jsx/FindUs.jsx";
 
 const Layout = () => {
-  return (
-    <div>
-      <Navbar />
-      <main>
-        <Outlet />
-      </main>
-      {/* <Footer /> */}
-    </div>
-  );
+    return (
+        <>
+            <Navbar/>
+            {/*<main>*/}
+            <Outlet/>
+            {/*</main>*/}
+            {/* <Footer /> */}
+            <FindUs />
+        </>
+    );
 };
 
 export default Layout;

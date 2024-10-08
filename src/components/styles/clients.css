@@ -3,7 +3,8 @@
 }
 .client_logo_section {
   /* background: red; */
-  min-height: 60vh;
+  /*min-height: 60vh;*/
+  height: max-content;
 }
 .clients h2 {
   text-align: center;
@@ -11,16 +12,21 @@
   color: var(--blue-titles);
 }
 .client-logos {
+  width: 95%;
+  margin: auto;
   padding: 0.2em;
   display: flex;
+  column-count: 6;
   align-items: center;
   flex-wrap: wrap;
 }
 .client-logos .card {
-  width: 140px;
+  /*width: 140px;*/
+  flex: 1;
+  min-width: 100px;
   height: 100px;
   background: white;
-  margin: 0.5em 1.3em 0.5em 1em;
+  /*margin: 0.5em 1.3em 0.5em 1em;*/
   overflow: hidden;
   display: grid;
   place-content: center;

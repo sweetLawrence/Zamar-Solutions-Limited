@@ -24,7 +24,11 @@ const useFetchServices = () => {
   };
 
   useEffect(() => {
-    fetchServices();
+    fetchServices()
+        .catch(() => {
+          // empty
+        })
+    ;
   }, []);
 
   return { services, images };
