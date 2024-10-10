@@ -17,13 +17,13 @@
   margin-top: 5%;
   font-weight: 600;
 }
-.te
+
 
 .testimonials .cards_section {
   margin-top: 0.5em;
   display: flex;
   align-items: center;
-  padding: 0.5em 2em 2em 2em;
+  padding: 1.5em 2em 2em 2em;
 
   
   background: #f0f0f0;
@@ -70,20 +70,22 @@
   flex-direction: column;
   align-items: center;
   margin: 0 0.5em;
-  background: rgb(243, 244, 248);
+  /* background: rgb(243, 244, 248); */
   /* border: 2px solid var(--secondary-color); */
 
 }
 @media screen and (max-width: 500px) {
   .testimonial_card {
     width: 375px; /*380*/
-    height: 320px;
+    height: 320px;/*320*/
+    padding-bottom: .4em;
+    background: red;
     min-width: none;
     margin: 0 auto;
   }
 
   .testimonials .cards_section {
-    padding: 0.5em 0em 2em 0em;
+    padding: 1.5em 0em 2em 0em;
     /* background: red; */
   }
 

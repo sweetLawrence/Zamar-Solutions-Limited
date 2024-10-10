@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import NotFound from './components/NotFound';
 import Four04 from './components/Four04';
 import About from './pages/About';
+import Careers from './pages/Careers';
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/careers',
-        element: <NotFound />, 
+        element: <Careers />, 
       },{
         path: '/talk-to-us',
         element: <NotFound />, 

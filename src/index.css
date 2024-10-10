@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+h1,h2,h3{
+  font-family: "Marcellus", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
 :root {
-  font-family: 'Marcellus', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: "Marcellus", system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Poppons", system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,13 +18,42 @@
   --accent-color-left: #00abe7;
   --accent-color-right: #18d95f;
   --bg-color: #f8f8f8;
-  --blue-titles:#2C599C;
+  --blue-titles: #2c599c;
 }
 
+.open-positions-card {
+  width: 90%;
+  min-height: 100px;
+  background: white;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 0.3em;
+  border: 1px solid #f0f0f0;
+}
+.open-positions-card .upper {
+  border-bottom: 1px solid #f0f0f0;
+  padding: .3em 0;
+}
+.open-positions-card .lower {
+  padding: .3em .3em;
+}
+.open-positions-card .postion-title {
+  font-family: "Marcellus", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.open-positions-card .accordion-content{
+/* background: red; */
+padding: .4em 0;
+}
+.accordion-content h3{
+  margin-bottom: .2em;
+}
+.accordion-content ul{
+  margin-left: 1.4em;
+}
+.accordion-content li{
+  margin-bottom: .3em;
+}
 
-
-
-  /* color-scheme: light dark;   */
-  /* color: rgba(255, 255, 255, 0.87); */
-  /* background-color: #242424; */
 
