@@ -3,30 +3,25 @@
 }
 .client_logo_section {
   /* background: red; */
-  /*min-height: 60vh;*/
-  height: max-content;
+  min-height: 60vh;
 }
 .clients h2 {
   text-align: center;
-  font-size: 2em;
+  font-size: 2.5em;
   color: var(--blue-titles);
 }
 .client-logos {
-  width: 95%;
-  margin: auto;
   padding: 0.2em;
   display: flex;
-  column-count: 6;
   align-items: center;
   flex-wrap: wrap;
 }
 .client-logos .card {
-  /*width: 140px;*/
-  flex: 1;
-  min-width: 100px;
+  width: 140px;
   height: 100px;
   background: white;
-  /*margin: 0.5em 1.3em 0.5em 1em;*/
+
+  margin: 0.5em 1.3em 0.5em 1em;
   overflow: hidden;
   display: grid;
   place-content: center;
@@ -40,6 +35,12 @@
   scale: 0.7;
 }
 
-.clients .taltToUs{
-    text-align: center;
+.clients .taltToUs {
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .client-logos .card {
+    width: 90px;
+  }
 }

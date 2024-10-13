@@ -32,6 +32,16 @@
   border: 0.4px solid transparent;
   overflow: hidden;
   margin-bottom: 1.5em;
+ 
+  /* z-index: -1000; */
+}
+.service_card .bg_image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* z-index: 100; */
 }
 .service_card img {
   position: absolute;
@@ -40,7 +50,7 @@
   object-fit: cover;
   width: 100%;
   z-index: -1;
-  scale: 1.2;
+  /* scale: 1.2; */
   filter: brightness(0.7);
 }
 .service_card .overlay {

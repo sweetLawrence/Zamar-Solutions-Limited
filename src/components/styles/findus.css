@@ -1,34 +1,19 @@
 .find_us {
-  /*margin-top: 2em;*/
-  width: 100%;
-  height: max-content;
+  margin-top: 2em;
+  height: 120vh;
   /* margin-bottom: 0.5em; */
   position: relative;
   background: #122541;
-  display: grid;
-  gap: 1rem;
-
-  & * {
-    /*outline: 1px solid red;*/
-  }
-
-  & .top-part {
-    width: 95%;
-    margin: auto;
-    display: grid;
-    padding: 1%;
-    gap: 1rem;
-  }
 }
 .find_us .img_holder {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 60%;
   overflow: hidden;
 }
 .find_us img {
   object-fit: cover;
-  /*filter: brightness(0.9);*/
+  filter: brightness(0.9);
 }
 .find_us .overlay {
   width: 100%;
@@ -36,15 +21,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom right, rgb(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(to bottom, rgb(0, 0, 0, 0.7), transparent);
   z-index: 2;
 }
 
 .find_us .texts_holder {
   z-index: 4;
-  /*position: absolute;*/
-  /*top: 18%;*/
-  /*left: 4%;*/
+  position: absolute;
+  top: 18%;
+  left: 4%;
   color: white;
   text-align: start;
 }
@@ -53,12 +38,12 @@
   margin-bottom: 0.1em;
 }
 .find_us .map {
-  /*position: absolute;*/
-  width: 100%;
+  position: absolute;
+  width: 92%;
   height: 310px;
   /* background: red; */
-  /*top: 40%;*/
-  /*left: 4%;*/
+  top: 40%;
+  left: 4%;
   border-radius: 12px;
   overflow: hidden;
   z-index: 7;
@@ -66,40 +51,43 @@
 
 .find_us .cp {
   color: white;
+  position: absolute;
+  bottom: 10px;
+  /* bottom: 25px; */
   width: 100%;
   text-align: center;
 }
 
 .find_us .pawtech {
-  /*position: absolute;*/
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
   font-size: 0.6em;
   color: #04e762;
-  /*margin: 0.5em 0 0 0;*/
+  margin: 0.5em 0 0 0;
   padding: 0.4em;
   background: #080f1b;
 }
 iframe{
-  border: none;
+  border: nonee;
 }
 
 @media screen and (max-width: 500px) {
   .find_us{
-    /*height: 80vh;*/
+    height: 80vh;
   }
   .find_us .img_holder {
-    /*height: 65%;*/
+    height: 65%;
     /* background: red; */
   }
   .find_us img {
     height: 100%;
   }
   .find_us .texts_holder {
-    /*top: 7%;*/
+    top: 7%;
   }
   .find_us .map {
-    /*top: 35%;*/
+    top: 35%;
   }
 }

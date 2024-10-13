@@ -11,7 +11,7 @@
  // * @param {any} props.children
  */
 
-export default function ListFounder(props) {
+ export default function ListFounder(props) {
     // eslint-disable-next-line react/prop-types
     const {index, image, name, title, text} = props
     return (

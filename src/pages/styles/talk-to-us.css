@@ -1,0 +1,135 @@
+.talk-to-us {
+  position: relative;
+  margin-top: 4%;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .form-element {
+    min-height: 200px;
+    padding: 1.5em 0;
+    width: 60%;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 2px 2px 10px grey;
+  }
+}
+
+.talk-to-us .form-element {
+  form {
+    width: 90%;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.3em;
+      background: linear-gradient(
+        to right,
+        var(--accent-color-left),
+        var(--accent-color-right)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    & input {
+      border: none;
+      outline: none;
+      width: 90%;
+      padding: 1.2em 0;
+      margin-bottom: 0.4em;
+      border-bottom: 1px solid #00abe7;
+      font-size: 1.2em;
+    }
+
+    & .btn-sec {
+      margin-top: 1.5em;
+      width: 90%;
+    }
+    & .activate-textarea {
+      width: 100%;
+      margin-top: 0.5em;
+      text-align: center;
+      cursor: pointer;
+      h3 {
+        color: #00abe7;
+      }
+    }
+  }
+}
+
+.widenWidth {
+  width: 100%;
+}
+.round1,
+.round2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #44cf6c, #2e5fa7);
+  opacity: 0.6;
+}
+.round1 {
+  left: 14%;
+  top: 10%;
+  z-index: -2;
+}
+.round2 {
+  right: 14%;
+  bottom: 12%;
+  z-index: -2;
+}
+.plane {
+  position: absolute;
+  right: -35%;
+  top: 10%;
+}
+.curve {
+  position: absolute;
+  left: -60%;
+  top: 10%;
+}
+
+textarea {
+  width: 95%;
+  min-height: 100px;
+  border-radius: 5px;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+  .talk-to-us {
+    & .form-element {
+      width: 90%;
+    }
+  }
+
+  .round1,
+  .round2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #44cf6c, #2e5fa7);
+    opacity: 0.6;
+  }
+  .round1 {
+    left: -14%;
+    top: 17%;
+  }
+  .round2 {
+    right: -14%;
+    bottom: 19%;
+  }
+  .plane {
+    right: -35%;
+    top: 10%;
+  }
+  .curve {
+    left: -60%;
+    top: 10%;
+  }
+}

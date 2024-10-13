@@ -1,48 +1,128 @@
 /* TODO: CSS */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box!important;
 }
 
-.App {
-    /*overflow-x: hidden;*/
-}
+.App{
+  overflow-x: hidden;
+ }
 
 
 .button {
-    outline: none;
-    background: none;
-    border: none;
-    border: 0.1px solid transparent;
-    background: linear-gradient(
-            to right,
-            var(--accent-color-left),
-            var(--accent-color-right)
-    );
-    color: white;
-    padding: 1.0em 2.4em;
-    border-radius: 50px;
-    min-width: 150px;
+  outline: none;
+  background: none;
+  border: none;
+  border: 0.1px solid transparent;
+  background: linear-gradient(
+    to right,
+    var(--accent-color-left),
+    var(--accent-color-right)
+  );
+  color: white;
+  padding: 1.0em 2.4em;
+  border-radius: 50px;
+  min-width:150px ;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 .left_shape {
-    position: absolute;
-    top: 20%;
-    left: 0;
-    height: 100vh;
-    width: auto;
-    overflow: hidden;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  height: 100vh;
+  width: auto;
+  overflow: hidden;
 }
 
 .left_svg {
-    height: 100%;
-    width: auto;
-    /* position: relative; */
+  height: 100%;
+  width: auto;
+  /* position: relative; */
+  
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden;
+  z-index: -20;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoom 10s ease-in-out infinite;
+}
+
+.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1); 
+  }
+}
+
+
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height of the viewport */
+  text-align: center; /* Center text */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.not-found-title {
+  margin-top: 20px; /* Space between icon and title */
+  font-weight: bold;
+}
+
+.not-found-description {
+  margin: 10px 0; /* Space above and below description */
+  color: #666; /* Gray color for description text */
+}
+
+.not-found-button {
+  margin-top: 23px!important; /* Space above button */
 }
