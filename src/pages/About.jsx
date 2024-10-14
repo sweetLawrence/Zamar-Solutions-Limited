@@ -10,9 +10,9 @@ import Vision from "../assets/images/vision.png";
 import Values from "../assets/images/values.png";
 import TeamCard from "../components/MinorComponents/TeamCard";
 
-import Samuel from "../assets/images/samuel.jpeg";
 import Frida from "../assets/images/frider.png";
 import Mike from '../assets/images/mike.png'
+import Samuel from "../assets/images/samuel.png";
 import { useEffect, useState } from "react";
 
 const About = () => {
