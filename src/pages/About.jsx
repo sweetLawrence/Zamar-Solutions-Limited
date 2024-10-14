@@ -20,7 +20,6 @@ const About = () => {
   const teamImages = [Samuel, Frida,Mike];
   const [elapsedYears, setElapsedYears] = useState(0);
 
-  // Calculate elapsed years when the component mounts
   useEffect(() => {
     const currentYear = new Date().getFullYear();
     const yearsElapsed = currentYear - 2017;
