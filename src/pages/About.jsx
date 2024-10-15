@@ -11,19 +11,39 @@ import Values from "../assets/images/values.png";
 import TeamCard from "../components/MinorComponents/TeamCard";
 
 import Frida from "../assets/images/frider.png";
-import Mike from '../assets/images/mike.png'
+import Mike from "../assets/images/mike.png";
 import Samuel from "../assets/images/samuel.png";
 import { useEffect, useState } from "react";
+import axios from "axios";
+import Spinner from "../components/MinorComponents/Spinner";
 
 const About = () => {
   const images = [Mission, Vision, Values];
-  const teamImages = [Samuel, Frida,Mike];
+  const teamImages = [Samuel, Frida, Mike];
   const [elapsedYears, setElapsedYears] = useState(0);
+  const [teamMembers, setTeamMembers] = useState([]);
 
   useEffect(() => {
     const currentYear = new Date().getFullYear();
     const yearsElapsed = currentYear - 2017;
     setElapsedYears(yearsElapsed);
+  }, []);
+
+  useEffect(() => {
+
+    const fetchTeamMembers = async () => {
+      try {
+        const response = await axios.get(
+          "https://zamar.pockethost.io/api/collections/Team/records"
+        );
+        setTeamMembers(response.data.items);
+        // console.log("Fetched Data [TEAM]", response.data.items);
+      } catch (error) {
+        console.error("Error fetching team members:", error);
+      }
+    };
+
+    fetchTeamMembers();
   }, []);
 
   return (
@@ -56,38 +76,28 @@ const About = () => {
 
           <div className="content">
             <div className="item">
-              <span>Zamar Solutions</span> is Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Corrupti impedit, at tenetur
-              nesciunt possimus aut nihil numquam praesentium suscipit ullam
-              aspernatur animi facere cupiditate voluptatum nulla distinctio eum
-              in maiores enim ipsam! Quasi blanditiis maxime omnis aut quo
-              suscipit sunt nisi? Pariatur quasi corporis atque voluptas et
-              molestias facere, aperiam ducimus itaque, fugit consectetur
+              <span>Zamar Solutions</span> is a premier advertising agency
+              specializing in brand activation and creating memorable
+              experiences that resonate with audiences. We excel in both indoor
+              and outdoor branding, crafting visually compelling solutions that
+              effectively convey your brand's message. Our expertise also
+              extends to digital marketing, where we design targeted strategies
+              that enhance your online visibility and engagement. Through
+              innovative digital screen advertising, we deliver dynamic content
+              that captures attention and drives consumer interaction, ensuring
+              your brand stands out in a crowded marketplace.
             </div>
 
             <div className="item">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              eos dignissimos sint autem maxime veritatis atque incidunt itaque
-              ipsam quis mollitia quisquam, sapiente quibusdam nobis deserunt
-              similique vitae eum quam repellat nesciunt maiores! Alias, eos
-              labore aliquid distinctio corrupti facere consectetur officiis
-              voluptatibus pariatur beatae dignissimos molestiae qui
+              Our dedicated team is passionate about collaboration, working
+              closely with clients to develop activation campaigns that inspire
+              action and build lasting connections. At Zamar Solutions, we
+              understand the importance of a holistic approach to advertising,
+              seamlessly integrating various channels to amplify your brand's
+              impact. We are committed to helping you navigate the evolving
+              landscape of marketing and advertising, empowering your brand to
+              thrive and achieve its goals.
             </div>
-            {/* 
-            <div className="item">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              illo voluptas iure ducimus quis. Aliquam sed, perspiciatis numquam
-              explicabo fugit id consectetur laudantium recusandae, vero ea nisi
-              maiores, quo deleniti et debitis assumenda. Impedit sunt facere
-              quo reiciendis, atque quaerat? Consequatur laborum accusamus nulla
-              tempora, rem eaque rerum veritatis inventore quia nam velit,
-              dolorum sit magnam esse quis nisi! Laborum, provident voluptatibus
-              soluta veritatis officiis, nihil quaerat inventore aliquid
-              voluptas harum aliquam doloribus natus officia consectetur
-              necessitatibus laudantium doloremque. Facilis vero obcaecati
-              repellendus eius aut ratione possimus aliquid quae ex animi ipsa
-              delectus voluptatibus, nostrum magnam ea praesentium dolores eos.
-            </div> */}
           </div>
         </div>
       </div>
@@ -130,58 +140,77 @@ const About = () => {
 
       {/* THE TEAM */}
       <div className="team-members">
-        <div className="mini-title">
+        <div className="mini-title stubborn">
           <p>Team Members</p>
           <div className="line"></div>
         </div>
-        <div className="heading">
+        <div className="heading stubborn">
           <h1>Our Team</h1>
         </div>
+        
 
         <div className="team-area">
-          <TeamCard
-            person={<img src={teamImages[0]} />}
-            personName="Mr. Samuel Rakara"
-            designation={"Founder"}
-          />
-          <TeamCard
-            person={<img src={teamImages[1]} />}
-            personName={"Ms. Frider Gatavi"}
-            designation={"Head of Marketing"}
-            orderClass={"reverse"}
-          />
-          <TeamCard
-            person={<img src={teamImages[2]} />}
-            personName="Mr. Mike Kusina"
-            designation={"Activation Operations"}
-          />
+          {teamMembers.length > 0 && (
+            <>
+              <TeamCard
+                person={<img src={teamImages[0]} alt="Samuel Rakara" />}
+                personName="Mr. Samuel Rakara"
+                designation={"Founder"}
+                profileContent={
+                  teamMembers.find(
+                    (member) => member.member_name === "Mr. Samuel Rakara"
+                  )?.member_story || <Spinner />
+                }
+              />
+              <TeamCard
+                person={<img src={teamImages[1]} alt="Frider Gatavi" />}
+                personName={"Ms. Frider Gatavi"}
+                designation={"Head of Marketing"}
+                profileContent={
+                  teamMembers.find(
+                    (member) => member.member_name === "Ms. Frider Gatavi"
+                  )?.member_story ||  <Spinner />
+                }
+                orderClass={"reverse"}
+              />
+              <TeamCard
+                person={<img src={teamImages[2]} alt="Mike Kusina" />}
+                personName="Mr. Mike Kusina"
+                designation={"Activation Operations"}
+                profileContent={
+                  teamMembers.find(
+                    (member) => member.member_name === "Mr. Mike Kusina"
+                  )?.member_story || <Spinner />
+                }
+              />
+            </>
+          )}
         </div>
       </div>
       {/* THE TEAM */}
 
       {/* STATISTICS */}
       <div className="statistics">
-        
         <div className="stats">
-        <div className="stat-item">
-        <div className="kabox"></div>
-          <div className="top">{elapsedYears-1}+</div>
-          <div className="bottom">Years in Business</div>
-        </div>
-        <div className="stat-item">
-          <div className="top">15+</div>
-          <div className="bottom">Clients Served</div>
-        </div>
-        <div className="stat-item">
-          <div className="top">5+</div>
-          <div className="bottom">Industries Covered</div>
-        </div>
-        <div className="stat-item">
-          <div className="top">95%</div>
-          <div className="bottom">Customer Satisfaction rate</div>
-        </div>
-        </div>
+          <div className="stat-item">
+            <div className="kabox"></div>
+            <div className="top">{elapsedYears - 1}+</div>
+            <div className="bottom">Years in Business</div>
         
+          </div>
+          <div className="stat-item">
+            <div className="top">15+</div>
+            <div className="bottom">Clients Served</div>
+          </div>
+          <div className="stat-item">
+            <div className="top">5+</div>
+            <div className="bottom">Industries Covered</div>
+          </div>
+          <div className="stat-item">
+            <div className="top">95%</div>
+            <div className="bottom">Customer Satisfaction rate</div>
+          </div>
+        </div>
       </div>
       {/* STATISTICS */}
     </div>

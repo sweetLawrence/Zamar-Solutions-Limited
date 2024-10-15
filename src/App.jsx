@@ -9,8 +9,8 @@ function App() {
   useEffect(() => {
     document.title =
       __APP_ENV__ === "prod"
-        ? "Zamar Solutions - Production Mode"
-        : "Zamar Solutions - Dev Mode";
+        ? "Zamar Solutions"
+        : "Zamar Solutions";
   }, []);
 
 

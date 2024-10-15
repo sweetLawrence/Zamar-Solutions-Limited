@@ -1,34 +1,56 @@
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./styles/talk-to-us.css";
 import Button from "../components/Button";
+import emailjs from "@emailjs/browser";
+import { Toaster, toast } from 'sonner'
 
 const TalkToUs = () => {
   const [showMessageArea, setShowMessageArea] = useState(false);
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [message, setMessage] = useState("");
+  const [isGoing,setIsGoing]  = useState(false);
+  const form = useRef();
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setIsGoing(true);
 
- 
     const submissionData = {
       name: name,
       contact: contact,
-      message: showMessageArea ? message : null, 
-      requestCallback: !showMessageArea, 
+      message: showMessageArea ? message : null,
+      requestCallback: !showMessageArea,
     };
 
+    // Sending the email via EmailJS
+    emailjs
+      .send("service_fer2hxr", "template_kafwa2x", {
+        user_name: name,
+        user_contact: contact,
+        message: showMessageArea ? message : "I am Requesting a callback",
+      }, "UIGBbNppn32kGIDh_")
+      .then(
+        () => {
+         setIsGoing(false)
+          // alert("Success")
+          toast.success('Email Sent Successfully')
+        
+          setName("");
+          setContact("");
+          setMessage("");
+          setShowMessageArea(false);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error('Try Again')
+          setIsGoing(false)
+        }
+      );
 
     console.log("Submission Data:", submissionData);
-
-
-    setName("");
-    setContact("");
-    setMessage("");
-    setShowMessageArea(false); 
-  }
+  };
 
   return (
     <div className="talk-to-us">
@@ -64,7 +86,7 @@ const TalkToUs = () => {
       </div>
       <div className="round2"></div>
       <div className="form-element">
-        <form onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={handleSubmit}>
           <h2>Let Us Reach Out</h2>
           <div className="input-element">
             <input
@@ -98,7 +120,8 @@ const TalkToUs = () => {
 
           <div className="btn-sec">
             {!showMessageArea && (
-              <Button content={"Request Callback"} widenWidth={"widenWidth"} />
+              // <Button content={`Request Callback`} widenWidth={"widenWidth"} />
+              <Button content={"Submit"} widenWidth={"widenWidth"} loading={isGoing} />
             )}
           </div>
 
@@ -112,11 +135,12 @@ const TalkToUs = () => {
 
           {showMessageArea && (
             <div className="btn-sec">
-              <Button content={"Submit"} widenWidth={"widenWidth"} />
+              <Button content={"Submit"} widenWidth={"widenWidth"} loading={isGoing}/>
             </div>
           )}
         </form>
       </div>
+      <Toaster richColors position="top-right"/>
     </div>
   );
 };

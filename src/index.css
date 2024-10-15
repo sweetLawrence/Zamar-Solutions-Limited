@@ -184,7 +184,9 @@ h3 {
 
     width: 60%;
     height: 90%;
+    height: 150px;
     /* background: yellow; */
+    font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
     background: white;
     margin-top: 10%;
     margin-left: -14%;
@@ -197,7 +199,10 @@ h3 {
 
     & p {
       margin-bottom: 0.7em;
+      font-size: .9em;
+      height: 90%;
       word-wrap: break-word;
+      /* background: red; */
     }
   }
 }
@@ -249,7 +254,7 @@ h3 {
     align-items: start;
 
     & .content {
-      height: 300px!important;
+      height: 300px !important;
       width: 90%;
       margin-left: 0;
 

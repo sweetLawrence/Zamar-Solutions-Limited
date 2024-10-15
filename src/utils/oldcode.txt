@@ -1,0 +1,20 @@
+
+        <div className="team-area">
+          <TeamCard
+            person={<img src={teamImages[0]} />}
+            personName="Mr. Samuel Rakara"
+            designation={"Founder"}
+            profileContent={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minimadoloremque neque totam quaerat et obcaecati culpa sed voluptatesperferendis..."}
+          />
+          <TeamCard
+            person={<img src={teamImages[1]} />}
+            personName={"Ms. Frider Gatavi"}
+            designation={"Head of Marketing"}
+            orderClass={"reverse"}
+          />
+          <TeamCard
+            person={<img src={teamImages[2]} />}
+            personName="Mr. Mike Kusina"
+            designation={"Activation Operations"}
+          />
+        </div> 
