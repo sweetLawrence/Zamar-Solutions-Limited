@@ -11,8 +11,8 @@ import Values from "../assets/images/values.png";
 import TeamCard from "../components/MinorComponents/TeamCard";
 
 import Frida from "../assets/images/frider.png";
-import Mike from "../assets/images/mike.png";
-import Samuel from "../assets/images/samuel.png";
+import Mike from "../assets/images/mike.webp";
+import Samuel from "../assets/images/samuel.jpg";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from "../components/MinorComponents/Spinner";

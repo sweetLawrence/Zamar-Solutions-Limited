@@ -1,5 +1,4 @@
 import "../styles/values.css";
-import Woman from "../../assets/images/woman.png";
 import ValueCards from "../MinorComponents/ValueCards";
 import { valuesdata } from "../../Data/valuesdata";
 
